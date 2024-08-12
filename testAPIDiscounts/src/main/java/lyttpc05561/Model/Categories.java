@@ -23,11 +23,11 @@ public class Categories {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int categoryId;
 
-    @ManyToOne
-    @JoinColumn(name = "status_id", nullable = false)
-    private CategoriesStatus categoriesStatus;
+//    @ManyToOne
+    @JoinColumn(name = "statusId", nullable = false)
+    private Integer statusId;
     
-    @Column(name = "category_name", nullable = false)
+    @Column(name = "categoryName", nullable = false)
     private String categoryName;
 
 }

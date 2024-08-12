@@ -43,7 +43,7 @@ public class CategoriesController {
     public Categories updateCategories(@PathVariable int id, @RequestBody Categories categoriesDetails) {
     	Categories categories = categoriesRepository.findById(id)
             .orElseThrow(() -> new ResourceNotFoundException("Discount not found with id " + id));
-    	categories.setCategoriesStatus(categoriesDetails.getCategoriesStatus());
+    	categories.setStatusId(categoriesDetails.getStatusId());
     	categories.setCategoryName(categoriesDetails.getCategoryName());
        
         return categoriesRepository.save(categories);
