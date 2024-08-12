@@ -29,9 +29,9 @@ public class Discount {
     @Column(name = "quantity", nullable = false)
     private int quantity;
 
-    @ManyToOne
+//    @ManyToOne
     @JoinColumn(name = "discount_type_id", nullable = false)
-    private DiscountType discountType;
+    private Integer discount_type_id;
 
     @Column(name = "discount_value", nullable = false)
     private float discountValue;
@@ -45,9 +45,9 @@ public class Discount {
     @Column(name = "min_invoice_amount", nullable = false)
     private float minInvoiceAmount;
 
-    @ManyToOne
+//    @ManyToOne
     @JoinColumn(name = "status_id", nullable = false)
-    private DiscountStatus status;
+    private Integer status_id;
 
     // Getters and Setters
 }
