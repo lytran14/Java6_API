@@ -38,12 +38,12 @@ public class DiscountController {
             .orElseThrow(() -> new ResourceNotFoundException("Discount not found with id " + id));
         discount.setDiscountCode(discountDetails.getDiscountCode());
         discount.setQuantity(discountDetails.getQuantity());
-        discount.setDiscountType(discountDetails.getDiscountType());
+        discount.setDiscount_type_id(discountDetails.getDiscount_type_id());
         discount.setDiscountValue(discountDetails.getDiscountValue());
         discount.setStartDate(discountDetails.getStartDate());
         discount.setEndDate(discountDetails.getEndDate());
         discount.setMinInvoiceAmount(discountDetails.getMinInvoiceAmount());
-        discount.setStatus(discountDetails.getStatus());
+        discount.setStatus_id(discountDetails.getStatus_id());
         return discountRepository.save(discount);
     }
 
